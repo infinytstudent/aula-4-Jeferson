@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function verificarPalindromo(texto) {
+  const textoSemFormato = texto.replace(/[\s.,?!-]/g, "").toLowerCase();
+
+  const arrayTexto = textoSemFormato.split("");
+
+
+  const arrayInvertido = arrayTexto.slice().reverse();
+
+  const textoInvertido = arrayInvertido.join("");
+
+  return textoSemFormato === textoInvertido;
+}
+
+
+const texto = prompt("Digite um texto para verificar se é palíndromo:");
+const resultado = verificarPalindromo(texto);
+
+if (resultado) {
+  console.log(`"${texto}" é um palíndromo!`);
+} else {
+  console.log(`"${texto}" não é um palíndromo.`);
+}
+
+    </script>
+</body>
+</html>

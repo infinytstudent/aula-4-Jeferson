@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function contarVogais(palavra) {
+  // Variável para contar as vogais
+  let contadorVogais = 0;
+
+  // Expressão regular para identificar vogais (maiúsculas e minúsculas)
+  const regexVogais = /[aeiouà-ú]/gi;
+
+  // Percorre cada caractere da palavra
+  for (let i = 0; i < palavra.length; i++) {
+    // Verifica se o caractere atual é uma vogal
+    if (regexVogais.test(palavra[i])) {
+      contadorVogais++;
+    }
+  }
+
+  // Retorna o número de vogais
+  return contadorVogais;
+}
+
+// Solicita a palavra ao usuário
+const palavraUsuario = prompt("Digite uma palavra para contar as vogais:");
+
+// Chama a função para contar as vogais
+const numeroVogais = contarVogais(palavraUsuario);
+
+// Exibe o resultado
+console.log(`A palavra "${palavraUsuario}" possui ${numeroVogais} vogal(is).`);
+
+    </script>
+</body>
+</html>
